@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        
+        @font-face{
+            font-family:'copperplate';
+            src:url('Font/copperplate-gothic-bold/CopperplateGothicBold.ttf');
+        }
+
+        @font-face{
+            font-family:'bebas_neue';
+            src:url('Font/bebas_neue/BebasNeue-Regular.ttf');
+        }
+
+
+        @font-face{
+            font-family:'old_london';
+            src:url('Font/old_london/Olondon_.otf');
+        }
+
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+
+        .login_page{
+            display:grid;
+            grid-area:'login_page';
+            width:100%;
+            
+            ;
+            
+        }
+
+
+        .login_page img{
+            width:100%;
+            
+        }
+
+        .login{
+            display:grid;
+            grid-area:'login';
+            width:35%;
+            height:650px;
+            grid-template-columns: 100%;
+            grid-template-rows: 150px 150px 150px 100px;
+            grid-template-areas: 
+            'login_header'
+            'username'
+            'password'
+            'signIn'
+            ;
+            background-color:white;
+            box-shadow:20px 20px 20px rgba(0,0,0,0.5);
+            position:absolute;
+            margin-left:50%;
+            margin-top:150px;
+
+        }
+
+        .login_header{
+            grid-area:'login_header';
+            width:100%;
+            height:150px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .username{
+            grid-area:'username';
+            width:100%;
+            height:150px;
+
+        }
+
+        .password{
+            grid-area:'password';
+            width:100%;
+            height:150px;
+
+        }
+
+        .signIn{
+            grid-area:'signIn';
+            width:100%;
+            height:100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+            font-family:'old_london';
+            font-size:60px;
+        }
+
+        h2{
+            font-family:'bebas_neue';
+            font-size:35px;
+            margin-left:5%;
+
+        }
+
+        input{
+            width:350px;
+            height:50px;
+            margin-left:7%;
+            border-style:none;
+            box-shadow:4px 4px 4px rgba(0,0,0,0.5);
+        }
+        button{
+            width:180px;
+            height:55px;
+            border-style:none;
+            background-color:transparent;
+            font-size:40px;
+            font-family:'old_london';
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="login_page">
+        <img src="Login/resource/bg.png">
+        <div class="login">
+            <div class="login_header">
+                <h1>
+                    Login
+                </h1>
+            </div>
+            <div class="username">
+                <h2>
+                    Username
+                </h2>
+                <input type="text" value="Type your Username and Password" id="user">
+            </div>
+            <div class="password">
+
+                <h2>
+                    Password
+                </h2>
+                <input type="password" value="" id="pass">
+            </div>
+            <div class="signIn">
+                <button class="signin" onclick="goin()">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const user = document.getElementById('user');
+        const pass = document.getElementById('pass');
+
+        function goin(){
+
+            if(user.value==='Raffi'&& pass.value==='GG12345'){
+                alert('Halo Raffi'+ '\n'+ 'R Garage Selalu Menunggumu!');
+
+                window.location.href = 'cars.html';
+            }
+            else{
+                alert('Username atau Password mungkin ada yang salah');
+            }
+
+        }
+    </script>
+</body>
+</html>

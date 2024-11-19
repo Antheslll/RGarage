@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+
+        @font-face{
+            font-family:'copperplate';
+            src:url('Font/copperplate-gothic-bold/CopperplateGothicBold.ttf');
+        }
+
+        @font-face{
+            font-family:'bebas_neue';
+            src:url('Font/bebas_neue/BebasNeue-Regular.ttf');
+        }
+
+
+        @font-face{
+            font-family:'old_london';
+            src:url('Font/old_london/Olondon_.otf');
+        }
+
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+        .home_page{
+            display:grid;
+            margin:auto;
+            overflow:hidden;
+            width:100%;
+            
+            ;
+        }
+
+        .bg{
+            width:100%;
+
+        }
+        .logo{
+            position:absolute;
+            margin-top:80px;
+            margin-left:35.5%;
+            width:380px;
+        }
+
+        .home_page h1{
+            position:absolute;
+            margin-top:480px;
+            color:white;
+            font-size:70px;
+            margin-left:32.3%;
+            
+            font-family:'copperplate';
+        }
+
+
+        .navbar{
+            display:grid;
+            grid-area:'navbar';
+            width:75%;
+            height:60px;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows:60px;
+            grid-template-areas:
+            'nav1'
+            'nav2'
+            'nav3'
+            'nav4'
+            'nav5'
+            ;
+            background-color:none;
+            justify-self: center;
+            position:absolute;
+            margin-top:650px;
+
+        }
+
+        .nav1{
+            
+            grid-area:'nav1';
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:none;
+        }
+
+        .nav2{
+            grid-area:'nav2';
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:none;
+        }
+
+
+        .nav3{
+            grid-area:'nav3';
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:none;
+        }
+
+
+        .nav4{
+            grid-area:'nav4';
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:none;
+        }
+
+        .nav5{
+            grid-area:'nav5';
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:none;
+        }
+
+        .button_navigagte{
+            width:180px;
+            height:60px;
+            color:white;
+            background-color:transparent;
+            border-style:none;
+            font-family:'copperplate';
+            font-size:25px;
+
+        }
+
+        .button_navigagte:hover{
+            transition:0.3s;
+            box-shadow:4px 4px 5px white ;
+            font-size:29px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="home_page">
+        <img src="Home/resource/BG.png" class="bg">
+        <img src="Home/resource/logo.png" class="logo">
+        
+        <h1>
+            - WELCOME -
+        </h1>
+
+        <div class="navbar">
+            <div class="nav1">
+                <a href="index.html">
+                    <button class="button_navigagte">
+                        HOME
+                    </button>
+                </a>
+            </div>
+
+
+            <div class="nav2">
+                <a href="cars.html" target="_blank">
+                    <button class="button_navigagte">
+                        CARS
+                    </button>
+                </a>
+            </div>
+
+            <div class="nav3">
+                <a href="service.html" target="_blank">
+                    <button class="button_navigagte">
+                        SERVICE
+                    </button>
+                </a>
+            </div>
+
+            <div class="nav4">
+                <a href="location.html" target="_blank">
+                    <button class="button_navigagte">
+                        LOCATION
+                    </button>
+                </a>
+            </div>
+
+            <div class="nav5">
+                <a href="login.html" target="_blank">
+                    <button class="button_navigagte">
+                        LOGIN
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

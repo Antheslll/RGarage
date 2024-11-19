@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Page</title>
+    <style>
+         @font-face{
+            font-family:'copperplate';
+            src:url('Font/copperplate-gothic-bold/CopperplateGothicBold.ttf');
+        }
+
+        @font-face{
+            font-family:'bebas_neue';
+            src:url('Font/bebas_neue/BebasNeue-Regular.ttf');
+        }
+
+
+        @font-face{
+            font-family:'old_london';
+            src:url('Font/old_london/Olondon_.otf');
+        }
+
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+
+        .car_page{
+            display:grid;
+            grid-area:'car_page';
+            width:100%;
+            height:600px;
+        }
+
+        .RR{
+            display:grid;
+            grid-area:'RR';
+        }
+
+        .RRbg{
+            width:100%;
+            height:700px;
+        }
+
+        .RRc{
+            width:58%;
+            position:absolute;
+            margin-top:220px;
+            margin-left:6%;
+        }
+
+        .RR h1{
+            font-family:'old_london';
+            font-size:150px;
+            position:absolute;
+            margin-left:49%;
+            margin-top:50px;
+            color:white;
+        }
+
+        .RR h2{
+            font-family:'copperplate';
+            font-size:100px;
+            position:absolute;
+            margin-top:220px;
+            margin-left:66%;
+            color:white;
+
+        }
+
+
+        .MB{
+            display:grid;
+            grid-area:'MB';
+        }
+
+        .MBbg{
+            width:100%;
+            height:700px;
+        }
+
+        .MBc{
+            width:50%;
+            position:absolute;
+            margin-top:220px;
+            margin-left:6%;
+        }
+
+        .MB h1{
+            font-family:'old_london';
+            font-size:128px;
+            position:absolute;
+            margin-left:49%;
+            margin-top:50px;
+            color:white;
+        }
+
+        .MB h2{
+            font-family:'copperplate';
+            font-size:95px;
+            position:absolute;
+            margin-top:220px;
+            margin-left:67%;
+            color:white;
+
+        }
+
+
+        .B{
+            display:grid;
+            grid-area:'B';
+        }
+
+        .Bbg{
+            width:100%;
+            height:700px;
+        }
+
+        .Bc{
+            width:58%;
+            position:absolute;
+            margin-top:220px;
+            margin-left:6%;
+        }
+
+        .B h1{
+            font-family:'old_london';
+            font-size:150px;
+            position:absolute;
+            margin-left:66%;
+            margin-top:50px;
+            color:white;
+        }
+
+        .B h2{
+            font-family:'copperplate';
+            font-size:70px;
+            position:absolute;
+            margin-top:220px;
+            margin-left:58%;
+            color:white;
+
+        }
+
+        .interface_navigate{
+            width:25%;
+            height:250px;
+            background-color:none;
+            position:absolute;
+            margin-left:5%;
+            margin-top:50px;
+        }
+
+        .intnav{
+            width:300px;
+            height:50px;
+            background-color:transparent;
+            font-family:'bebas_neue';
+            font-size:40px;
+            border-style:none;
+            color:white;
+            text-align:left;
+        }
+
+        .intnav:hover{
+            color:black;
+            transition:0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="car_page">
+        <div class="RR" id="rr">
+            <img class="RRbg" src="Cars/resource/bg.png">
+            <img class="RRc" src="Cars/resource/pngwing.com.png">
+            
+            <h1>
+                Rolls Royce
+            </h1>
+
+            <h2>
+                GHOST
+            </h2>
+        </div>
+        <div class="MB" id="mb">
+            <img class="MBbg" src="Cars/resource/bg.png">
+            <img class="MBc" src="Cars/resource/pngegg.png">
+            
+            <h1>
+                Mercedes Benz
+            </h1>
+
+            <h2>
+                G Class
+            </h2>
+        </div>
+        <div class="B" id="b">
+            <img class="Bbg" src="Cars/resource/bg.png">
+            <img class="Bc" src="Cars/resource/pngegg (1).png">
+            
+            <h1>
+                Bentley
+            </h1>
+
+            <h2>
+                Flying Spurs
+            </h2>
+        </div>
+
+        <div class="interface_navigate">
+            <button class="intnav" onclick="rrcl()">
+                Rolls Royce
+            </button><br>
+
+            <button class="intnav" onclick="mbcl()">
+                Mercedez Benz
+            </button><br>
+
+            <button class="intnav" onclick="bcl()">
+                Bentley
+            </button>
+        </div>
+    </div>
+
+    <script>
+
+        const rr = document.getElementById('rr');
+        const mb = document.getElementById('mb');
+        const b = document.getElementById('b');
+
+        rr.style.display = 'grid';
+        mb.style.display = 'none';
+        b.style.display = 'none';
+
+        function rrcl(){
+            rr.style.display = 'grid';
+            mb.style.display = 'none';
+            b.style.display = 'none';
+            
+        }
+
+
+        function mbcl(){
+            rr.style.display = 'none';
+            mb.style.display = 'grid';
+            b.style.display = 'none';
+
+        }
+
+        function bcl(){
+            rr.style.display = 'none';
+            mb.style.display = 'none';
+            b.style.display = 'grid';
+
+        }
+    </script>
+</body>
+</html>
